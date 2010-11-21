@@ -81,13 +81,44 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
+							<string>support.directive.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
 							<string>punctuation.separator.key-value.restructuredtext</string>
 						</dict>
 					</dict>
 					<key>comment</key>
 					<string>directives</string>
 					<key>match</key>
-					<string>(\.\.)\s[A-z][A-z0-9-_]+(::)(\s|$)</string>
+					<string>(\.\.)\s([A-z][A-z0-9-_]+)(::)\s*$</string>
+					<key>name</key>
+					<string>meta.other.directive.restructuredtext</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.directive.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.directive.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.separator.key-value.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>directives with arguments</string>
+					<key>match</key>
+					<string>(\.\.)\s([A-z][A-z0-9-_]+)(::)\s+(.+?)\s*$</string>
 					<key>name</key>
 					<string>meta.other.directive.restructuredtext</string>
 				</dict>
