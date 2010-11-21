@@ -173,8 +173,6 @@
 					</array>
 				</dict>
 				<dict>
-					<key>comment</key>
-					<string>directives</string>
 					<key>match</key>
 					<string>::</string>
 					<key>name</key>
