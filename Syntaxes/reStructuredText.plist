@@ -33,7 +33,7 @@
 	</array>
 	<key>repository</key>
 	<dict>
-		<key>inline</key>
+		<key>directives</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -126,6 +126,16 @@
 					<string>(\.\.)\s([A-z][A-z0-9-_]+)(::)\s+(.+?)\s*$</string>
 					<key>name</key>
 					<string>meta.other.directive.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>inline</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#directives</string>
 				</dict>
 				<dict>
 					<key>begin</key>
