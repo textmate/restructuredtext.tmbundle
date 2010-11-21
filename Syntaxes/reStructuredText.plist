@@ -114,6 +114,11 @@
 							<key>name</key>
 							<string>punctuation.separator.key-value.restructuredtext</string>
 						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.directive.restructuredtext</string>
+						</dict>
 					</dict>
 					<key>comment</key>
 					<string>directives with arguments</string>
