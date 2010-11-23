@@ -682,7 +682,7 @@
 						</dict>
 					</dict>
 					<key>comment</key>
-					<string>verbatim blocks</string>
+					<string>Indented Literal Blocks</string>
 					<key>end</key>
 					<string>^(?=\1[^\s]+)</string>
 					<key>name</key>
