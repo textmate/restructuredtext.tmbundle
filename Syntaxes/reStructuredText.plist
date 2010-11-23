@@ -129,18 +129,10 @@
 				</dict>
 			</array>
 		</dict>
-		<key>inline</key>
+		<key>emphasis</key>
 		<dict>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#directives</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#raw-blocks</string>
-				</dict>
 				<dict>
 					<key>captures</key>
 					<dict>
@@ -155,8 +147,6 @@
 							<string>punctuation.definition.bold.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>comment</key>
-					<string>strong emphasis</string>
 					<key>match</key>
 					<string>(\*\*)[^*]+(\*\*)</string>
 					<key>name</key>
@@ -176,12 +166,28 @@
 							<string>punctuation.definition.italic.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>comment</key>
-					<string>emphasis</string>
 					<key>match</key>
 					<string>(\*)\w[^*]+\w(\*)</string>
 					<key>name</key>
 					<string>markup.italic.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>inline</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#directives</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#raw-blocks</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#emphasis</string>
 				</dict>
 				<dict>
 					<key>captures</key>
