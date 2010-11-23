@@ -138,91 +138,8 @@
 					<string>#directives</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>^\*([ \t]*).*?(::)\s*$</string>
-					<key>captures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.raw.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>verbatim blocks</string>
-					<key>end</key>
-					<string>^(?!(\1\s\s)|(\s*$))</string>
-					<key>name</key>
-					<string>meta.raw.block.restructuredtext</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>match</key>
-							<string>.+</string>
-							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>^[#1-9](\.)?([ \t]*).*?(::)\s*$</string>
-					<key>captures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.raw.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>verbatim blocks</string>
-					<key>end</key>
-					<string>^(?!(\2\s\s\s)|(\s*$))</string>
-					<key>name</key>
-					<string>meta.raw.block.restructuredtext</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>match</key>
-							<string>.+</string>
-							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>^([ \t]*).*?(::)\s*$</string>
-					<key>captures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.raw.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>verbatim blocks</string>
-					<key>end</key>
-					<string>^(?!(\1\s)|(\s*$))</string>
-					<key>name</key>
-					<string>meta.raw.block.restructuredtext</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>match</key>
-							<string>.+</string>
-							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>::</string>
-					<key>name</key>
-					<string>meta.startraw.restructuredtext</string>
+					<key>include</key>
+					<string>#raw-blocks</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -735,6 +652,50 @@
 					<string>^[\s]*$\n?</string>
 					<key>name</key>
 					<string>comment.line.double-dot.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>raw-blocks</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>^([ \t]*).*?((::))</string>
+					<key>captures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.raw.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>verbatim blocks</string>
+					<key>end</key>
+					<string>^(?=\1[^\s]+)</string>
+					<key>name</key>
+					<string>meta.raw.block.restructuredtext</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>.+</string>
+							<key>name</key>
+							<string>markup.raw.restructuredtext</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>::</string>
+					<key>name</key>
+					<string>meta.startraw.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
