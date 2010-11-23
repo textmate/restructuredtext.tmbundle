@@ -657,41 +657,40 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>^([ \t]*).*?((::))</string>
-					<key>capturename</key>
-					<string>meta.raw.block.restructuredtext</string>
-					<key>captures</key>
+					<string>(::)$</string>
+					<key>beginCaptures</key>
 					<dict>
-						<key>2</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.raw.restructuredtext</string>
+							<string>punctuation.section.raw.restructuredtext</string>
 						</dict>
 					</dict>
+					<key>capturename</key>
+					<string>meta.raw.block.restructuredtext</string>
 					<key>comment</key>
-					<string>Indented Literal Blocks</string>
+					<string>Literal Blocks</string>
 					<key>end</key>
-					<string>^(?=\1[^\s]+)</string>
+					<string>^\S</string>
 					<key>patterns</key>
 					<array>
 						<dict>
-							<key>match</key>
-							<string>.+</string>
-							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
+							<key>include</key>
+							<string>#raw-blocks-inner</string>
 						</dict>
 					</array>
 				</dict>
+			</array>
+		</dict>
+		<key>raw-blocks-inner</key>
+		<dict>
+			<key>patterns</key>
+			<array>
 				<dict>
 					<key>match</key>
-					<string>::</string>
+					<string>.+</string>
 					<key>name</key>
-					<string>meta.startraw.restructuredtext</string>
+					<string>markup.raw.inner.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
