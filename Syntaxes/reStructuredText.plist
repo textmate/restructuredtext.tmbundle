@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>syntax highlighting for reStructuredText http://docutils.sourceforge.net, based on rst mode from jEdit</string>
+	<string>Syntax highlighting for reStructuredText: http://docutils.sourceforge.net</string>
 	<key>fileTypes</key>
 	<array>
 		<string>rst</string>
