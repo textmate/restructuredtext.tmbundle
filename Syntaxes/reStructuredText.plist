@@ -658,6 +658,8 @@
 				<dict>
 					<key>begin</key>
 					<string>^([ \t]*).*?((::))</string>
+					<key>capturename</key>
+					<string>meta.raw.block.restructuredtext</string>
 					<key>captures</key>
 					<dict>
 						<key>2</key>
@@ -675,8 +677,6 @@
 					<string>Indented Literal Blocks</string>
 					<key>end</key>
 					<string>^(?=\1[^\s]+)</string>
-					<key>name</key>
-					<string>meta.raw.block.restructuredtext</string>
 					<key>patterns</key>
 					<array>
 						<dict>
