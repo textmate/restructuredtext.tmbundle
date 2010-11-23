@@ -606,36 +606,8 @@
 					<string>entity.name.tag.restructuredtext</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.table.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>table</string>
-					<key>match</key>
-					<string>\+-[+-]+</string>
-					<key>name</key>
-					<string>markup.other.table.restructuredtext</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.table.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>table</string>
-					<key>match</key>
-					<string>\+=[+=]+</string>
-					<key>name</key>
-					<string>markup.other.table.restructuredtext</string>
+					<key>include</key>
+					<string>#tables</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -712,6 +684,40 @@
 					<string>::</string>
 					<key>name</key>
 					<string>meta.startraw.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>tables</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.table.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\+-[+-]+</string>
+					<key>name</key>
+					<string>markup.other.table.restructuredtext</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.table.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\+=[+=]+</string>
+					<key>name</key>
+					<string>markup.other.table.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
