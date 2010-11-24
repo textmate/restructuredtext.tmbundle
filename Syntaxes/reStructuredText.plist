@@ -404,51 +404,8 @@
 					<string>markup.underline.substitution.restructuredtext</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.title.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>links `...`_ or `...`__</string>
-					<key>match</key>
-					<string>\b([-\w]+)(_)\b</string>
-					<key>name</key>
-					<string>meta.link.reference</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.title.restructuredtext</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>links `...`_ or `...`__</string>
-					<key>match</key>
-					<string>(`)([-\w\s]+)(`_)</string>
-					<key>name</key>
-					<string>meta.link.reference</string>
+					<key>include</key>
+					<string>#link-reference</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -648,6 +605,59 @@
 				<dict>
 					<key>include</key>
 					<string>#comments</string>
+				</dict>
+			</array>
+		</dict>
+		<key>link-reference</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.link.title.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>links `...`_ or `...`__</string>
+					<key>match</key>
+					<string>\b([-\w]+)(_)\b</string>
+					<key>name</key>
+					<string>meta.link.reference</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.link.title.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>links `...`_ or `...`__</string>
+					<key>match</key>
+					<string>(`)([-\w\s]+)(`_)</string>
+					<key>name</key>
+					<string>meta.link.reference</string>
 				</dict>
 			</array>
 		</dict>
