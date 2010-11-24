@@ -710,10 +710,10 @@
 							<string>punctuation.section.raw.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>capturename</key>
-					<string>meta.raw.block.restructuredtext</string>
 					<key>comment</key>
 					<string>Literal Blocks</string>
+					<key>contentName</key>
+					<string>meta.raw.block.restructuredtext</string>
 					<key>end</key>
 					<string>^\S</string>
 					<key>patterns</key>
