@@ -458,6 +458,27 @@
 					<string>markup.raw.restructuredtext</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>intepreted text</string>
+					<key>match</key>
+					<string>(`)[^`]+(`)(?!_)</string>
+					<key>name</key>
+					<string>markup.other.command.restructuredtext</string>
+				</dict>
+				<dict>
 					<key>include</key>
 					<string>#link-reference</string>
 				</dict>
@@ -584,27 +605,6 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.intepreted.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.intepreted.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>intepreted text</string>
-					<key>match</key>
-					<string>(`)[^`]+(`)(?!_)</string>
-					<key>name</key>
-					<string>markup.other.command.restructuredtext</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
 							<string>punctuation.definition.field.restructuredtext</string>
 						</dict>
 						<key>2</key>
@@ -678,8 +678,6 @@
 							<string>punctuation.definition.link.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>contentName</key>
-					<string>string.other.link.title.restructuredtext</string>
 					<key>end</key>
 					<string>(`_)</string>
 					<key>endCaptures</key>
@@ -692,6 +690,15 @@
 					</dict>
 					<key>name</key>
 					<string>meta.link.reference</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>[^`]+</string>
+							<key>name</key>
+							<string>string.other.link.title.restructuredtext</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
