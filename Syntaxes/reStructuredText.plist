@@ -440,6 +440,24 @@
 					<string>markup.underline.substitution.restructuredtext</string>
 				</dict>
 				<dict>
+					<key>begin</key>
+					<string>``</string>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>inline literal</string>
+					<key>end</key>
+					<string>``</string>
+					<key>name</key>
+					<string>markup.raw.restructuredtext</string>
+				</dict>
+				<dict>
 					<key>include</key>
 					<string>#link-reference</string>
 				</dict>
@@ -561,24 +579,6 @@
 					<string>meta.link.citation.restructuredtext</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>``</string>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.raw.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>inline literal</string>
-					<key>end</key>
-					<string>``</string>
-					<key>name</key>
-					<string>markup.raw.restructuredtext</string>
-				</dict>
-				<dict>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -669,7 +669,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(`)(?!`)</string>
+					<string>(`)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
