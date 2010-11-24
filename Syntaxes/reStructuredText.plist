@@ -626,10 +626,8 @@
 							<string>punctuation.definition.link.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>comment</key>
-					<string>links `...`_ or `...`__</string>
 					<key>match</key>
-					<string>\b([-\w]+)(_)\b</string>
+					<string>\b([-.:+_\d\w]+)(_)\b</string>
 					<key>name</key>
 					<string>meta.link.reference</string>
 				</dict>
@@ -652,10 +650,8 @@
 							<string>punctuation.definition.link.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>comment</key>
-					<string>links `...`_ or `...`__</string>
 					<key>match</key>
-					<string>(`)([-\w\s]+)(`_)</string>
+					<string>(`)([^`]+)(`_)</string>
 					<key>name</key>
 					<string>meta.link.reference</string>
 				</dict>
