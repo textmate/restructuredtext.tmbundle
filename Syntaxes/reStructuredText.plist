@@ -483,6 +483,32 @@
 					<string>#link-reference</string>
 				</dict>
 				<dict>
+					<key>begin</key>
+					<string>(`)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>intepreted text</string>
+					<key>end</key>
+					<string>(`)(?!_)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>markup.other.command.restructuredtext</string>
+				</dict>
+				<dict>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
