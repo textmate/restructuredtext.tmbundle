@@ -383,7 +383,43 @@
 					<key>comment</key>
 					<string>replacement</string>
 					<key>match</key>
-					<string>(\.\.)\s+(_)([-\w\s]+)(:)\s+(.*)</string>
+					<string>(\.\.)\s+(_)([-.\d\w\s]+)(:)\s+(.*)</string>
+					<key>name</key>
+					<string>meta.link.reference.def.restructuredtext</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.link.title.restructuredtext</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.separator.key-value.restructuredtext</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>replacement</string>
+					<key>match</key>
+					<string>(\.\.)\s+(_`)([^`]+)(`:)\s+(.*)</string>
 					<key>name</key>
 					<string>meta.link.reference.def.restructuredtext</string>
 				</dict>
