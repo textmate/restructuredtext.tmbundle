@@ -383,7 +383,7 @@
 					<key>comment</key>
 					<string>replacement</string>
 					<key>match</key>
-					<string>(\.\.)\s+(_)([\w\s\-_]+)(:)\s+(.*)</string>
+					<string>(\.\.)\s+(_)([-\w\s]+)(:)\s+(.*)</string>
 					<key>name</key>
 					<string>meta.link.reference.def.restructuredtext</string>
 				</dict>
@@ -420,7 +420,7 @@
 					<key>comment</key>
 					<string>links `...`_ or `...`__</string>
 					<key>match</key>
-					<string>\b(\w+)(_)\b</string>
+					<string>\b([-\w]+)(_)\b</string>
 					<key>name</key>
 					<string>meta.link.reference</string>
 				</dict>
@@ -446,7 +446,7 @@
 					<key>comment</key>
 					<string>links `...`_ or `...`__</string>
 					<key>match</key>
-					<string>(`)([\w\s]+)(`_)</string>
+					<string>(`)([-\w\s]+)(`_)</string>
 					<key>name</key>
 					<string>meta.link.reference</string>
 				</dict>
