@@ -472,7 +472,7 @@
 						</dict>
 					</dict>
 					<key>comment</key>
-					<string>intepreted text</string>
+					<string>intepreted text - single line</string>
 					<key>match</key>
 					<string>(`)[^`]+(`)(?!_)</string>
 					<key>name</key>
@@ -484,7 +484,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(`)</string>
+					<string>(:)([-A-z0-9_.]*)(:)(`)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -492,11 +492,28 @@
 							<key>name</key>
 							<string>punctuation.definition.intepreted.restructuredtext</string>
 						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.role.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.intepreted.restructuredtext</string>
+						</dict>
 					</dict>
 					<key>comment</key>
-					<string>intepreted text</string>
+					<string>intepreted text - multiline with role</string>
+					<key>contentName</key>
+					<string>string.other.interpreted.restructuredtext</string>
 					<key>end</key>
-					<string>(`)(?!_)</string>
+					<string>(`)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
