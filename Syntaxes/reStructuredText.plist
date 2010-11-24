@@ -668,26 +668,28 @@
 					<string>meta.link.reference</string>
 				</dict>
 				<dict>
-					<key>captures</key>
+					<key>begin</key>
+					<string>(`)</string>
+					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.link.restructuredtext</string>
 						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.link.title.restructuredtext</string>
-						</dict>
-						<key>3</key>
+					</dict>
+					<key>contentName</key>
+					<string>string.other.link.title.restructuredtext</string>
+					<key>end</key>
+					<string>(`_)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.link.restructuredtext</string>
 						</dict>
 					</dict>
-					<key>match</key>
-					<string>(`)([^`]+)(`_)</string>
 					<key>name</key>
 					<string>meta.link.reference</string>
 				</dict>
