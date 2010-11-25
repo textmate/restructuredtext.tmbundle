@@ -226,25 +226,8 @@
 					<string>#citations</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.field.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.field.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>field list</string>
-					<key>match</key>
-					<string>(:)[A-z][A-z0-9  =\s\t_]*(:)</string>
-					<key>name</key>
-					<string>entity.name.tag.restructuredtext</string>
+					<key>include</key>
+					<string>#tags</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -870,6 +853,33 @@
 					<string>\+=[+=]+</string>
 					<key>name</key>
 					<string>markup.other.table.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>tags</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.field.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.field.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>tags (and field lists</string>
+					<key>match</key>
+					<string>(:)[A-z][A-z0-9  =\s\t_]*(:)</string>
+					<key>name</key>
+					<string>entity.name.tag.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
