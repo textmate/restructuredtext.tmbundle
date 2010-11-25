@@ -479,6 +479,27 @@
 					<string>markup.other.command.restructuredtext</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>anonymous links __ url</string>
+					<key>match</key>
+					<string>\s*(__)\s+(.+)</string>
+					<key>name</key>
+					<string>meta.link.restructuredtext</string>
+				</dict>
+				<dict>
 					<key>include</key>
 					<string>#link-reference</string>
 				</dict>
