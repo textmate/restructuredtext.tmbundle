@@ -33,6 +33,84 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>citations</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>constant.other.citation.link.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+						<key>6</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.citation.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>replacement</string>
+					<key>match</key>
+					<string>^(\.\.)\s+((\[)[A-z][A-z0-9]*(\]))(_)\s+(.*)</string>
+					<key>name</key>
+					<string>meta.link.citation.def.restructuredtext</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>constant.other.citation.link.restructuredtext</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.constant.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>citation reference</string>
+					<key>match</key>
+					<string>((\[)[A-z][A-z0-9_-]*(\]))(_)</string>
+					<key>name</key>
+					<string>meta.link.citation.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
 		<key>comments</key>
 		<dict>
 			<key>patterns</key>
@@ -592,76 +670,8 @@
 					<string>#footnotes</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.link.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>constant.other.citation.link.restructuredtext</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>string.other.citation.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>replacement</string>
-					<key>match</key>
-					<string>^(\.\.)\s+((\[)[A-z][A-z0-9]*(\]))(_)\s+(.*)</string>
-					<key>name</key>
-					<string>meta.link.citation.def.restructuredtext</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>constant.other.citation.link.restructuredtext</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.constant.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>citation reference</string>
-					<key>match</key>
-					<string>((\[)[A-z][A-z0-9_-]*(\]))(_)</string>
-					<key>name</key>
-					<string>meta.link.citation.restructuredtext</string>
+					<key>include</key>
+					<string>#citations</string>
 				</dict>
 				<dict>
 					<key>captures</key>
