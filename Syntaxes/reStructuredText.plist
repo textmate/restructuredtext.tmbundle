@@ -453,7 +453,7 @@
 					<key>comment</key>
 					<string>inline literal</string>
 					<key>end</key>
-					<string>``</string>
+					<string>``((?=[^`\w\d])|$)</string>
 					<key>name</key>
 					<string>markup.raw.restructuredtext</string>
 				</dict>
