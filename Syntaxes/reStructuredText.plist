@@ -251,18 +251,8 @@
 					<string>#tables</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.heading.restructuredtext</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(^(=|-|~|`|#|"|\^|\+|\*){3,}$){1,1}?</string>
-					<key>name</key>
-					<string>markup.heading.restructuredtext</string>
+					<key>include</key>
+					<string>#headings</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -647,6 +637,26 @@
 					<string>((\[)\*(\]))(_)</string>
 					<key>name</key>
 					<string>meta.link.footnote.symbol.auto.restructuredtext</string>
+				</dict>
+			</array>
+		</dict>
+		<key>headings</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.restructuredtext</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(^(=|-|~|`|#|"|\^|\+|\*){3,}$){1,1}?</string>
+					<key>name</key>
+					<string>markup.heading.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
