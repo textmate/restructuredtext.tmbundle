@@ -679,7 +679,7 @@
 					<key>comment</key>
 					<string>replacement</string>
 					<key>match</key>
-					<string>(\.\.)\s+(_)([-.\d\w\s]+)(:)\s+(.*)</string>
+					<string>(\.\.)\s+(_)([-.\d\w\s()]+)(:)\s+(.*)</string>
 					<key>name</key>
 					<string>meta.link.reference.def.restructuredtext</string>
 				</dict>
