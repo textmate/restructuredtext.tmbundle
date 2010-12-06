@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>open "http://docutils.sourceforge.net/rst.html"
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
+	<key>name</key>
+	<string>Docutils Website</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>text.restructuredtext</string>
+	<key>uuid</key>
+	<string>8B5B4FAD-88E2-4EDB-8E7B-20B9F26E5BB6</string>
+</dict>
+</plist>

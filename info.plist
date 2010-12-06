@@ -25,6 +25,8 @@
 			<string>------------------------------------</string>
 			<string>30B64864-E358-4D60-AE91-FF2DCE325F6A</string>
 			<string>AF1834CD-DE30-4C7D-A251-B2E5F2639C72</string>
+			<string>------------------------------------</string>
+			<string>8D201DD0-3987-4BA4-BE83-442DDFC8EE8F</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -41,6 +43,15 @@
 				</array>
 				<key>name</key>
 				<string>Insert</string>
+			</dict>
+			<key>8D201DD0-3987-4BA4-BE83-442DDFC8EE8F</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>8B5B4FAD-88E2-4EDB-8E7B-20B9F26E5BB6</string>
+				</array>
+				<key>name</key>
+				<string>Documentation</string>
 			</dict>
 			<key>AF1834CD-DE30-4C7D-A251-B2E5F2639C72</key>
 			<dict>
