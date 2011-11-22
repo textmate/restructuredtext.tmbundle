@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>TRST=${TM_RST2HTML:=rst2html.py}
-
-require_cmd "$TRST" "You can either set the &lt;tt&gt;TM_RST2HTML&lt;/tt&gt; variable to the full path of your docutils (docutils.sourceforge.net) installation (e.g. &lt;tt&gt;/Library/Frameworks/Python.framework/Versions/2.4/bin/rst2html.py&lt;/tt&gt; or set the &lt;tt&gt;PATH&lt;/tt&gt; variable to include the path of the docutils converters."
+	<string>#!/usr/bin/env bash
 
 # Send the current file through rst2html.py
 
@@ -36,8 +34,8 @@ if [[ -n $stylesheet ]]
 fi
 
 out=`mktemp -t /tmp`
-echo "Running: $TRST $flags \"$TM_FILEPATH\" \"$out.html\""
-$TRST $flags "$TM_FILEPATH" "$out.html"
+echo "Running: \"${TM_RST2HTML:=rst2html.py}\" $flags \"$TM_FILEPATH\" \"$out.html\""
+"${TM_RST2HTML:=rst2html.py}" $flags "$TM_FILEPATH" "$out.html"
 open "$out.html"
 
 #rm "$out.html"
@@ -49,15 +47,37 @@ fi
 </string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@p</string>
 	<key>name</key>
 	<string>Preview in Browser</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>rst2html.py</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/rst2html.py</string>
+				<string>/usr/local/bin/rst2html.py</string>
+			</array>
+			<key>variable</key>
+			<string>TM_RST2HTML</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>text.restructuredtext</string>
 	<key>uuid</key>
 	<string>065700E0-FE74-43E9-867E-019FF0D1487B</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
