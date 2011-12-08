@@ -93,15 +93,10 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>^([ \t]*).*?((::))</string>
+					<string>(::)\s*$</string>
 					<key>captures</key>
 					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>markup.raw.restructuredtext</string>
-						</dict>
-						<key>3</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.raw.restructuredtext</string>
@@ -110,7 +105,7 @@
 					<key>comment</key>
 					<string>verbatim blocks</string>
 					<key>end</key>
-					<string>^(?=\1[^\s]+)</string>
+					<string>^(?!\s)</string>
 					<key>name</key>
 					<string>meta.raw.block.restructuredtext</string>
 					<key>patterns</key>
