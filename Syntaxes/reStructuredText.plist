@@ -132,12 +132,12 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.italic.restructuredtext</string>
+							<string>punctuation.definition.bold.restructuredtext</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.italic.restructuredtext</string>
+							<string>punctuation.definition.bold.restructuredtext</string>
 						</dict>
 					</dict>
 					<key>comment</key>
