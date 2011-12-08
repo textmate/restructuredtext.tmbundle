@@ -304,7 +304,7 @@
 					<key>comment</key>
 					<string>links `...`_ </string>
 					<key>match</key>
-					<string>(`)([\w\s]+)\s+(&lt;)(.*?)(&gt;)(`_)</string>
+					<string>(`)([^&lt;`]+)\s+(&lt;)(.*?)(&gt;)(`_)</string>
 					<key>name</key>
 					<string>meta.link.inline.restructuredtext</string>
 				</dict>
