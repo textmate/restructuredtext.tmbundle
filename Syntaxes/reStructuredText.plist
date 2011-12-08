@@ -622,7 +622,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>^(\.\.)</string>
+					<string>^(\.\.)\s</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -634,7 +634,7 @@
 					<key>comment</key>
 					<string>comment</string>
 					<key>end</key>
-					<string>$\n?</string>
+					<string>^[\s]*$\n?</string>
 					<key>name</key>
 					<string>comment.line.double-dot.restructuredtext</string>
 				</dict>
