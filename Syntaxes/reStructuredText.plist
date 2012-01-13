@@ -87,16 +87,16 @@
 					<key>comment</key>
 					<string>directives</string>
 					<key>match</key>
-					<string>(\.\.)\s[A-z][A-z0-9-_]+(::)\s*$</string>
+					<string>(\.\.)\s[A-z][A-z0-9-_]+(::)(\s|$)</string>
 					<key>name</key>
 					<string>meta.other.directive.restructuredtext</string>
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(::)\s*$</string>
+					<string>^([ \t]*).*(::)\s*$</string>
 					<key>captures</key>
 					<dict>
-						<key>1</key>
+						<key>2</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.raw.restructuredtext</string>
@@ -105,7 +105,7 @@
 					<key>comment</key>
 					<string>verbatim blocks</string>
 					<key>end</key>
-					<string>^(?!\s)</string>
+					<string>(^\1(?!\s))|(^(?!\s))</string>
 					<key>name</key>
 					<string>meta.raw.block.restructuredtext</string>
 					<key>patterns</key>
@@ -200,7 +200,7 @@
 					<key>comment</key>
 					<string>replacement</string>
 					<key>match</key>
-					<string>(\.\.)\s+(_)([\w\s]+)(:)\s+(.*)</string>
+					<string>(\.\.)\s+(_)([\w\s\-_]+)(:)\s+(.*)</string>
 					<key>name</key>
 					<string>meta.link.reference.def.restructuredtext</string>
 				</dict>
