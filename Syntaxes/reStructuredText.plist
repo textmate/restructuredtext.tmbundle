@@ -61,7 +61,7 @@
 					<key>comment</key>
 					<string>directives.html</string>
 					<key>end</key>
-					<string>^(?!\2[ \t]</string>
+					<string>^(?!\2[ \t])</string>
 					<key>patterns</key>
 					<array>
 						<dict>
