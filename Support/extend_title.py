@@ -8,15 +8,17 @@ import os, sys, re
 
 lines = sys.stdin.readlines()
 lines = [i.rstrip() for i in lines]
-# Last line should be the markup line
-match = re.search(r'^(=|-|~|`|#|"|\^|\+|\*)+', lines[-1])
+
+# current line should be the markup line
+currentLine = int(os.environ['TM_LINE_NUMBER']) - 1
+match = re.search(r'^(=|-|~|`|#|"|\^|\+|\*)+', lines[currentLine])
 if not match:
 	# Oops, there needs to be text to match. Don't change anything.
-	print '\n'.join(lines)
+	print 'Cursor is not on a line with a section adornment'
+	print 'i.e. one of: = - ~ ` # " ^ + *'
 	sys.exit(-1)
-lineLen = len(lines[-2].expandtabs(int(os.environ['TM_TAB_SIZE'])))
+lineLen = len(lines[(currentLine-1)].expandtabs(int(os.environ['TM_TAB_SIZE'])))
 # escape snippet characters
 lines = [re.sub(r'([$`\\])', r'\\\1', i) for i in lines]
-lines[-1] = lineLen * lines[-1][0] + '$0'
+lines[currentLine] = lineLen * lines[currentLine][0] + '$0'
 print '\n'.join(lines)
-
