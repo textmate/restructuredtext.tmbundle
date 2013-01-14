@@ -16,7 +16,7 @@ if not match:
 	# Oops, there needs to be text to match. Don't change anything.
 	print 'Cursor is not on a line with a section adornment'
 	print 'i.e. one of: = - ~ ` # " ^ + *'
-	sys.exit(-1)
+	sys.exit(206)
 lineLen = len(lines[(currentLine-1)].expandtabs(int(os.environ['TM_TAB_SIZE'])))
 # escape snippet characters
 lines = [re.sub(r'([$`\\])', r'\\\1', i) for i in lines]
