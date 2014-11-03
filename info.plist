@@ -34,12 +34,17 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>081B7322-7D71-4C38-9E33-FEE716AA4D17</string>
+					<string>53A0FA7F-261F-4B59-8FC2-5E7E8BA44E42</string>
+					<string>------------------------------------</string>
 					<string>7B6D031A-FF9A-475A-8FD4-F8C099F96313</string>
 					<string>CCE7CCB5-048A-4AC6-B4E0-90873466BA1A</string>
 					<string>52736608-3034-4ECE-8B85-41D3F38A4029</string>
-					<string>------------------------------------</string>
-					<string>081B7322-7D71-4C38-9E33-FEE716AA4D17</string>
-					<string>53A0FA7F-261F-4B59-8FC2-5E7E8BA44E42</string>
+					<string>2CF8DDAA-33EE-4B20-A2E6-31C5855B8DF2</string>
+					<string>DE2370AA-C717-4978-B1C3-F1711C993BB2</string>
+					<string>A1EF4932-5343-4BD1-9E24-044638BD66A0</string>
+					<string>35BD86C4-EBB1-4EA8-9FCC-EC415019B7A5</string>
+					<string>92E1A10D-0612-49B1-9979-693D37D4236E</string>
 				</array>
 				<key>name</key>
 				<string>Insert</string>

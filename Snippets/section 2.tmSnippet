@@ -11,7 +11,7 @@ $0</string>
 	<key>scope</key>
 	<string>text.restructuredtext</string>
 	<key>tabTrigger</key>
-	<string>subs</string>
+	<string>s2</string>
 	<key>uuid</key>
 	<string>CCE7CCB5-048A-4AC6-B4E0-90873466BA1A</string>
 </dict>
